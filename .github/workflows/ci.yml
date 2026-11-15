@@ -46,4 +46,4 @@ jobs:
       - name: Compile and smoke-test package
         run: |
           python -m compileall -q robustnessbench.py tests
-          python -c "import robustnessbench; print('ok')"
+          python -c "from robustnessbench import RobustnessBench; print(type(RobustnessBench()).__name__)"
